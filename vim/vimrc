@@ -21,6 +21,8 @@ set mouse=a
 set number
 set hidden
 
+set scrolloff=3
+
 set nobackup
 set nowritebackup
 set noswapfile

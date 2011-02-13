@@ -26,6 +26,14 @@ else
     let s:molokai_original = 0
 endif
 
+" black    #000000  light #8F8F8F
+" red      #960050  light #1E0010 (its dark actually)
+" green    #        light #A6E22E
+" yellow   #E6B874
+" blue     #        light #66D9EF
+" magenta  #F92672  light #BCA3A3
+" cyan     #AE81FF
+" white    #F8F8F0  light #FFFFFF
 
 hi Boolean         guifg=#AE81FF
 hi Character       guifg=#E6DB74
