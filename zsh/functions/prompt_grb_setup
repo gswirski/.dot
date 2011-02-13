@@ -50,10 +50,10 @@ function minutes_since_last_commit {
 }
 
 function prompt_grb_scm_time_since_commit() {
-	local -A pc
-	pc=(${(kv)wunjo_prompt_colors})
-
-	if zgit_inworktree; then
+    local -A pc
+    pc=(${(kv)wunjo_prompt_colors})
+    
+    if zgit_inworktree; then
         local MINUTES_SINCE_LAST_COMMIT=`minutes_since_last_commit`
         if [ "$MINUTES_SINCE_LAST_COMMIT" -gt 30 ]; then
             COLOR="$pc[scm_time_long]"
@@ -69,7 +69,11 @@ function prompt_grb_scm_time_since_commit() {
 
 function prompt_grb_scm_info() {
     if zgit_inworktree; then
-        echo "($(prompt_grb_scm_time_since_commit)|$(prompt_wunjo_scm_branch))"
+        if ! zgit_isworktreeclean || zgit_hasunmerged || zgit_hasuntracked; then
+            echo "($(prompt_grb_scm_time_since_commit)|$(prompt_wunjo_scm_branch))"
+        else
+            echo "($(prompt_wunjo_scm_branch))"
+        fi
     fi
 }
 
