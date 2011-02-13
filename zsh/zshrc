@@ -1,0 +1,8 @@
+fpath=($fpath $HOME/.zsh/functions)
+typeset -U fpath
+
+# Prompt
+setopt promptsubst
+autoload -U promptinit
+promptinit
+prompt grb
