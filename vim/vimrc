@@ -104,6 +104,9 @@ let mapleader=","
 " Hide search highlighting
 map <Leader>h :set invhls <CR>
 
+vmap > >gv
+vmap < <gv
+
 " Edit routes
 command! Rroutes :e config/routes.rb
 command! Rschema :e db/schema.rb
