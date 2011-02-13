@@ -1,4 +1,6 @@
 fpath=($fpath $HOME/.zsh/functions)
+autoload -U $HOME/.zsh/functions/*(:t)
+
 typeset -U fpath
 
 export LS_OPTIONS='--color=auto'                                                                    
@@ -9,4 +11,5 @@ export PATH=$PATH:/usr/local/mongodb/bin/
 
 
 . ~/.zsh/git_prompt
+. ~/.zsh/completion
 . ~/.zsh/bindings
