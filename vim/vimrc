@@ -39,6 +39,11 @@ set smartcase
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
   set hlsearch
+  colorscheme dark
+endif
+
+if has("gui_running")
+  set guifont=Monaco:h12
 endif
 
 " Only do this part when compiled with support for autocommands.
