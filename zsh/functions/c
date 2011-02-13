@@ -1,1 +1,7 @@
-cd ~/Sites/Clients/$1;
+if [[ -a ~/Sites/Projects/$1 ]]; then
+  cd ~/Sites/Projects/$1;
+elif [[ -a ~/Sites/Clients/$1 ]]; then
+  cd ~/Sites/Clients/$1;
+else
+  echo "c: no such project directory: $1"
+fi
