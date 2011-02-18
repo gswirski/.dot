@@ -120,3 +120,7 @@ set complete=.,t
 " Tags
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 set tags=./tags;
+
+if filereadable(expand("~/.local.vimrc"))
+  source ~/.local.vimrc
+endif
