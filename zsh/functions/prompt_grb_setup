@@ -69,7 +69,7 @@ function prompt_grb_scm_time_since_commit() {
 
 function prompt_grb_scm_info() {
     if zgit_inworktree; then
-        if ! zgit_isworktreeclean || zgit_hasunmerged || zgit_hasuntracked; then
+        if ! zgit_isindexclean || ! zgit_isworktreeclean || zgit_hasunmerged || zgit_hasuntracked; then
             echo "($(prompt_grb_scm_time_since_commit)|$(prompt_wunjo_scm_branch))"
         else
             echo "($(prompt_wunjo_scm_branch))"
