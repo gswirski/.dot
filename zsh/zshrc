@@ -9,6 +9,7 @@ export LSCOLORS=''
 
 export PATH=$PATH:/usr/local/mongodb/bin/
 
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
 
 . ~/.zsh/git_prompt
 . ~/.zsh/completion
