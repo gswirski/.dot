@@ -14,5 +14,3 @@ export PATH="/usr/local/mongodb/bin:/usr/local/bin:/usr/local/php5/bin:/usr/loca
 . ~/.zsh/git_prompt
 . ~/.zsh/completion
 . ~/.zsh/bindings
-
-# dupa
