@@ -28,3 +28,6 @@ alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
 alias so='sudo /usr/local/nginx/sbin/nginx && sudo php-fpm'
 alias sc='sudo kill `cat /usr/local/nginx/logs/nginx.pid `' 
 alias sr='so; sc'
+
+# compiler
+alias cake=g++ -O2 --static -lm -Wall -Wshadow -o $0 $0.cpp
