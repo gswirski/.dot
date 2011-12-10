@@ -1,3 +1,2 @@
 #compdef c
-_files -W ~/Sites/Projects -/
-_files -W ~/Sites/Clients -/
+_files -W ~/Code -/

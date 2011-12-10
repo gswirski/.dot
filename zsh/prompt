@@ -1,0 +1,3 @@
+# Set the prompt.
+setopt PROMPT_SUBST
+PROMPT=$'%{${fg[cyan]}%}%B%~%b$(prompt_git_info)%{${fg[default]}%} '

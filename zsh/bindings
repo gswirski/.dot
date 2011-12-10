@@ -1,8 +1,3 @@
-bindkey '^[^[[D' backward-word
-bindkey '^[^[[C' forward-word
-bindkey '^[[5D' beginning-of-line
-bindkey '^[[5C' end-of-line
-
 # cd
 alias ..='cd ..'
 
@@ -29,5 +24,6 @@ alias so='sudo /usr/local/nginx/sbin/nginx && sudo php-fpm'
 alias sc='sudo kill `cat /usr/local/nginx/logs/nginx.pid `' 
 alias sr='so; sc'
 
-# compiler
-alias cake=g++ -O2 --static -lm -Wall -Wshadow -o $0 $0.cpp
+# screen
+alias sn='screen -S'
+alias sr='screen -x'

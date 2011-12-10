@@ -1,0 +1,7 @@
+startup_message off
+caption always "%-Lw%{= BW}%50>%n%f* %t%{-}%+Lw%< %= %c %d/%m/%Y"
+bindkey ^[, prev
+bindkey ^[; next
+shelltitle ""
+autodetach on
+defscrollback 65000

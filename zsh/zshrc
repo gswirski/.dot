@@ -1,16 +1,15 @@
-fpath=($fpath $HOME/.zsh/functions)
-autoload -U $HOME/.zsh/functions/*(:t)
+# Initialize colors.
+autoload -U colors
+colors
 
-typeset -U fpath
+# Autoload zsh functions.
+fpath=(~/.zsh/functions $fpath)
+autoload -U ~/.zsh/functions/*(:t)
 
-export LS_OPTIONS='--color=auto'                                                                    
-export CLICOLOR='Yes'
-export LSCOLORS=''
-
-export PATH="/Library/PostgreSQL/9.0/bin:/usr/local/mongodb/bin:/usr/local/bin:/usr/local/php5/bin:/usr/local/sbin:/usr/local/mysql/bin:$PATH"
-
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
-
-. ~/.zsh/git_prompt
+. ~/.zsh/environment
+. ~/.zsh/prompt
+. ~/.zsh/colors
 . ~/.zsh/completion
 . ~/.zsh/bindings
+
+. ~/.zshrc.local
