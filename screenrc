@@ -5,3 +5,5 @@ bindkey ^[; next
 shelltitle ""
 autodetach on
 defscrollback 65000
+altscreen on
+term screen-256color
