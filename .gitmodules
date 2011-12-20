@@ -7,3 +7,6 @@
 [submodule "vim/bundle/NERDCommenter"]
 	path = vim/bundle/NERDCommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/bundle/ConqueTerm"]
+	path = vim/bundle/ConqueTerm
+	url = https://github.com/rson/vim-conque.git
