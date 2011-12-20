@@ -51,3 +51,4 @@ set showcmd
 " FuzzyFinder configuration
 map <Leader>n :FufFileWithCurrentBufferDir<CR>
 map <Leader>b :FufBuffer<CR>
+map <Leader>t :FufBufferTag<CR>
