@@ -1,21 +1,15 @@
 set nocompatible
 
-" Use pathogen for bundle management
-call pathogen#infect()
-
-" Set the best leader
-let mapleader=","
-
-" Set encoding
-set encoding=utf-8
+call pathogen#infect() "Use pathogen for bundle management
+let mapleader=","      "Set the best leader
+set encoding=utf-8     "Set encoding
 
 " Look and feel
 set number
 set ruler
 syntax on
 
-" Status bar
-set laststatus=2
+set laststatus=2       " Status bar
 
 " Whitespace stuff
 set nowrap
@@ -24,6 +18,10 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set list listchars=tab:\ \ ,trail:·
+
+" Smoother scrolling
+set scrolloff=3
+nnoremap <Space> <C-d>
 
 " Searching
 set hlsearch
@@ -41,12 +39,18 @@ set backspace=indent,eol,start
 " Load the plugin and indent settings for the detected filetype
 filetype plugin indent on
 
+" Remove all trailing whitespace
+autocmd FileType c,cpp,php,rb,py autocmd BufWritePre * :%s/\s\+$//e
+
 " Directories for swp files
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
 " Show (partial) command in the status line
 set showcmd
+
+" Escaping from insert mode
+inoremap jj <ESC>
 
 " FuzzyFinder configuration
 map <Leader>n :FufFileWithCurrentBufferDir<CR>
