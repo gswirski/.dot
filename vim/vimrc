@@ -3,6 +3,7 @@ set nocompatible
 call pathogen#infect() "Use pathogen for bundle management
 let mapleader=","      "Set the best leader
 set encoding=utf-8     "Set encoding
+set hidden             "Better buffer behavior
 
 " Look and feel
 set number
@@ -18,6 +19,9 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set list listchars=tab:\ \ ,trail:·
+
+" Remove all trailing whitespace
+autocmd FileType c,cpp,php,rb,py autocmd BufWritePre * :%s/\s\+$//e
 
 " Smoother scrolling
 set scrolloff=3
@@ -38,9 +42,6 @@ set backspace=indent,eol,start
 
 " Load the plugin and indent settings for the detected filetype
 filetype plugin indent on
-
-" Remove all trailing whitespace
-autocmd FileType c,cpp,php,rb,py autocmd BufWritePre * :%s/\s\+$//e
 
 " Directories for swp files
 set backupdir=~/.vim/backup
