@@ -1,3 +1,4 @@
 # Set the prompt.
 setopt PROMPT_SUBST
-PROMPT=$'%{${fg[cyan]}%}%B%~%b$(prompt_git_info)%{${fg[default]}%} '
+export PROMPT=$'
+%(?.%F{cyan}.%F{red})%B%~%b%f$(prompt_git_info)%{$reset_color%} '

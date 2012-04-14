@@ -13,3 +13,6 @@
 [submodule "vim/bundle/scratch"]
 	path = vim/bundle/scratch
 	url = https://github.com/vim-scripts/scratch.vim.git
+[submodule "vim/bundle/SQLUtilities"]
+	path = vim/bundle/SQLUtilities
+	url = https://github.com/vim-scripts/SQLUtilities.git
