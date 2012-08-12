@@ -11,6 +11,7 @@ Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
+Bundle 'Lokaltog/vim-powerline'
 
 " Misc
 let mapleader=","      "Set the best leader
