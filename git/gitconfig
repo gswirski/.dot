@@ -1,0 +1,12 @@
+[core]
+  excludesfile = ~/.gitignore
+
+[user]
+  name = 'Grzegorz Świrski'
+  email = 'sognat@gmail.com'
+
+[color]
+  ui = true
+
+[credential]
+  helper = osxkeychain
