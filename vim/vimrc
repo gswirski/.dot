@@ -1,6 +1,18 @@
 set nocompatible
+filetype off
 
-call pathogen#infect() "Use pathogen for bundle management
+" Setup Vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Manage bundles
+Bundle 'gmarik/vundle'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+
+" Misc
 let mapleader=","      "Set the best leader
 set encoding=utf-8     "Set encoding
 set hidden             "Better buffer behavior
