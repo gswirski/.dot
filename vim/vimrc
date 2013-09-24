@@ -12,6 +12,8 @@ Bundle 'FuzzyFinder'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'Lokaltog/vim-powerline'
+Bundle 'jnwhiteh/vim-golang'
+Bundle 'kchmck/vim-coffee-script'
 
 " Misc
 let mapleader=","      "Set the best leader
@@ -22,6 +24,7 @@ set hidden             "Better buffer behavior
 set number
 set ruler
 syntax on
+set background=light
 
 set laststatus=2       " Status bar
 
@@ -70,3 +73,6 @@ inoremap jj <ESC>
 map <Leader>n :FufFileWithCurrentBufferDir<CR>
 map <Leader>b :FufBuffer<CR>
 map <Leader>t :FufBufferTag<CR>
+
+" Go config
+autocmd Filetype go setlocal noexpandtab

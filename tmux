@@ -5,7 +5,7 @@ bind C-q send-prefix
 
 # Quick pane cycling
 unbind ^Q
-bind ^Q select-pane -t :.+
+bind ^Q last-window
 
 # Act like Vim
 set-window-option -g mode-keys vi
