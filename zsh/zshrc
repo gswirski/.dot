@@ -7,9 +7,12 @@ fpath=(~/.zsh/functions $fpath)
 autoload -U ~/.zsh/functions/*(:t)
 
 . ~/.zsh/environment
+. ~/.zsh/history
 . ~/.zsh/prompt
 . ~/.zsh/colors
 . ~/.zsh/completion
 . ~/.zsh/bindings
 
 . ~/.zshrc.local
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

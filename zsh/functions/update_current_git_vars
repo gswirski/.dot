@@ -19,18 +19,18 @@ if [[ -n "$st" ]]; then
             __CURRENT_GIT_BRANCH_STATUS='ahead'
         elif [[ $arr[2] =~ 'diverged' ]]; then
             __CURRENT_GIT_BRANCH_STATUS='diverged'
-        else
+        elif [[ $arr[2] =~ 'behind' ]]; then
             __CURRENT_GIT_BRANCH_STATUS='behind'
         fi
     fi
 
     if [[ ! $st =~ 'nothing to commit' ]]; then
-		if [[ $st =~ 'not staged for commit' ]]; then
-			__CURRENT_GIT_BRANCH_NOT_STAGED='1'
-		elif [[ $st =~ 'Untracked files' ]]; then
-			__CURRENT_GIT_BRANCH_NOT_STAGED='1'
-		else
-			__CURRENT_GIT_BRANCH_IS_DIRTY='1'
-		fi
+        if [[ $st =~ 'not staged for commit' ]]; then
+            __CURRENT_GIT_BRANCH_NOT_STAGED='1'
+        elif [[ $st =~ 'Untracked files' ]]; then
+            __CURRENT_GIT_BRANCH_NOT_STAGED='1'
+        else
+            __CURRENT_GIT_BRANCH_IS_DIRTY='1'
+        fi
     fi
 fi

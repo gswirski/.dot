@@ -2,18 +2,24 @@ set nocompatible
 filetype off
 
 " Setup Vundle
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " Manage bundles
-Bundle 'gmarik/vundle'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'jnwhiteh/vim-golang'
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'jnwhiteh/vim-golang'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'kien/ctrlp.vim'
+
+call vundle#end()
+
+" Load the plugin and indent settings for the detected filetype
+filetype plugin indent on
 
 " Misc
 let mapleader=","      "Set the best leader
@@ -56,9 +62,6 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-" Load the plugin and indent settings for the detected filetype
-filetype plugin indent on
-
 " Directories for swp files
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
@@ -72,7 +75,9 @@ inoremap jj <ESC>
 " FuzzyFinder configuration
 map <Leader>n :FufFileWithCurrentBufferDir<CR>
 map <Leader>b :FufBuffer<CR>
-map <Leader>t :FufBufferTag<CR>
+
+" CtrlP configuration
+map <Leader>t :CtrlP<CR>
 
 " Go config
 autocmd Filetype go setlocal noexpandtab
