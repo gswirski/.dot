@@ -7,11 +7,11 @@ Installation
 ------------
 
 ```bash
-git clone git://github.com/sognat/.dot ~/.dot
+git clone git://github.com/gswirski/.dot ~/.dot
 ln -s ~/.dot/gitignore ~/.gitignore
 ln -s ~/.dot/inputrc ~/.inputrc
 ln -s ~/.dot/irbrc ~/.irbrc
-ln -s ~/.dot/screenrc ~/.screenrc
+ln -s ~/.dot/tmux ~/.tmux.conf
 ln -s ~/.dot/vim ~/.vim
 ln -s ~/.dot/vim/vimrc ./.vimrc
 ln -s ~/.dot/zsh ~/.zsh
