@@ -1,15 +1,10 @@
 [core]
-  excludesfile = ~/.gitignore
-
-[user]
-  name = 'Grzegorz Świrski'
-  email = 'sognat@gmail.com'
-
+	excludesfile = ~/.gitignore
+[color]
+	ui = true
+[credential]
+	helper = osxkeychain
 [push]
 	default = simple
-
-[color]
-  ui = true
-
-[credential]
-  helper = osxkeychain
+[merge]
+	defaultToUpstream = true
