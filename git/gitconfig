@@ -5,6 +5,9 @@
   name = 'Grzegorz Świrski'
   email = 'sognat@gmail.com'
 
+[push]
+	default = simple
+
 [color]
   ui = true
 

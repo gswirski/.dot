@@ -15,6 +15,7 @@ Plugin 'Lokaltog/vim-powerline'
 Plugin 'jnwhiteh/vim-golang'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
+Plugin 'altercation/vim-colors-solarized.git'
 
 call vundle#end()
 
@@ -25,12 +26,14 @@ filetype plugin indent on
 let mapleader=","      "Set the best leader
 set encoding=utf-8     "Set encoding
 set hidden             "Better buffer behavior
+set autoread           "Automatically pick up changes from disk
 
 " Look and feel
 set number
 set ruler
 syntax on
 set background=light
+colorscheme solarized
 
 set laststatus=2       " Status bar
 
@@ -44,6 +47,9 @@ set list listchars=tab:\ \ ,trail:·
 
 " Remove all trailing whitespace
 autocmd FileType c,cpp,php,rb,py autocmd BufWritePre * :%s/\s\+$//e
+
+" Color column 80
+set colorcolumn=80
 
 " Smoother scrolling
 set scrolloff=3
@@ -72,12 +78,12 @@ set showcmd
 " Escaping from insert mode
 inoremap jj <ESC>
 
-" FuzzyFinder configuration
-map <Leader>n :FufFileWithCurrentBufferDir<CR>
-map <Leader>b :FufBuffer<CR>
+" NERDTree configuration
+map <Leader>t :NERDTreeToggle<CR>
 
 " CtrlP configuration
-map <Leader>t :CtrlP<CR>
+map <Leader>n :CtrlP<CR>
+map <Leader>b :CtrlPBuffer<CR>
 
 " Go config
 autocmd Filetype go setlocal noexpandtab
