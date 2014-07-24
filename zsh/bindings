@@ -16,8 +16,8 @@ alias la='ls -A'
 alias s='git status -sb $argv; return 0'
 alias d='gd $argv'
 alias ga='git add'
+alias gA='git add -A'
 alias gap='ga -p'
-alias gau='git add -u'
 alias gbr='git branch -v'
 gc() {
   git diff --cached | grep '\btap[ph]\b' >/dev/null &&
@@ -36,6 +36,7 @@ alias gd.='git diff -M --color-words="."'
 alias gdc='git diff --cached -M'
 alias gdc.='git diff --cached -M --color-words="."'
 alias gf='git fetch'
+alias gfa='gf --all'
 git-new() {
   [ -d "$1" ] || mkdir "$1" &&
   cd "$1" &&
