@@ -48,8 +48,8 @@ set list listchars=tab:\ \ ,trail:·
 " Remove all trailing whitespace
 autocmd FileType c,cpp,php,rb,py autocmd BufWritePre * :%s/\s\+$//e
 
-" Color column 80
-set colorcolumn=80
+" Color column 81
+set colorcolumn=81
 
 " Smoother scrolling
 set scrolloff=3
